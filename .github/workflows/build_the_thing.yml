@@ -35,7 +35,8 @@ jobs:
       with:
         draft: false
         prerelease: false
-        release_name: ${{ github.sha }}
+        release_name: http ${{ github.sha }}
+        tag_name: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
